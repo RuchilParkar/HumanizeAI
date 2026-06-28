@@ -20,7 +20,7 @@ export const openRouterProvider: AIProvider = async (options: HumanizeOptions): 
         "X-Title": "HumanizeAI"
       },
       body: JSON.stringify({
-        model: "openai/gpt-3.5-turbo", // Fallback model
+        model: "meta-llama/llama-3.1-8b-instruct:free", // Fallback model
         messages: [{ role: "user", content: prompt }],
         temperature: options.intensity === "Strong" ? 0.9 : options.intensity === "Subtle" ? 0.3 : 0.6,
       }),

@@ -18,7 +18,7 @@ export const groqProvider: AIProvider = async (options: HumanizeOptions): Promis
         "Authorization": `Bearer ${apiKey}`
       },
       body: JSON.stringify({
-        model: "llama3-70b-8192", // Fast and capable model
+        model: "llama-3.3-70b-versatile", // Fast and capable model
         messages: [{ role: "user", content: prompt }],
         temperature: options.intensity === "Strong" ? 0.9 : options.intensity === "Subtle" ? 0.3 : 0.6,
       }),
