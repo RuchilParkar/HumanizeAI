@@ -1,0 +1,139 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-sans);
+  
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-4xl: 0px;
+}
+
+:root {
+  /* Brutalist Theme (Light mode preferred for Neo-brutalism) */
+  --background: oklch(0.95 0.05 100); /* Slightly yellow/warm stark background */
+  --foreground: oklch(0 0 0);
+  
+  --card: oklch(1 0 0); /* White */
+  --card-foreground: oklch(0 0 0);
+  
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0 0 0);
+  
+  --primary: oklch(0.9 0.22 100); /* Harsh Caution Yellow */
+  --primary-foreground: oklch(0 0 0);
+  
+  --secondary: oklch(0.75 0.22 40); /* Safety Orange */
+  --secondary-foreground: oklch(0 0 0);
+  
+  --muted: oklch(0.8 0 0);
+  --muted-foreground: oklch(0.2 0 0);
+  
+  --accent: oklch(0.65 0.25 25); /* Fire Engine Red */
+  --accent-foreground: oklch(0 0 0);
+  
+  --destructive: oklch(0.6 0.2 20);
+  --destructive-foreground: oklch(1 0 0);
+  
+  --border: oklch(0 0 0); /* Solid black borders */
+  --input: oklch(1 0 0);
+  --ring: oklch(0 0 0);
+  
+  --radius: 0px; 
+}
+
+.dark {
+  /* Dark Brutalism */
+  --background: oklch(0.15 0 0);
+  --foreground: oklch(1 0 0);
+  
+  --card: oklch(0.25 0 0);
+  --card-foreground: oklch(1 0 0);
+  
+  --popover: oklch(0.25 0 0);
+  --popover-foreground: oklch(1 0 0);
+  
+  --primary: oklch(0.9 0.22 100); /* Harsh Caution Yellow */
+  --primary-foreground: oklch(0 0 0);
+  
+  --secondary: oklch(0.75 0.22 40); /* Safety Orange */
+  --secondary-foreground: oklch(0 0 0);
+  
+  --muted: oklch(0.3 0 0);
+  --muted-foreground: oklch(0.8 0 0);
+  
+  --accent: oklch(0.65 0.25 25); /* Fire Engine Red */
+  --accent-foreground: oklch(0 0 0);
+  
+  --destructive: oklch(0.6 0.2 20);
+  --destructive-foreground: oklch(1 0 0);
+  
+  --border: oklch(1 0 0);
+  --input: oklch(0.1 0 0);
+  --ring: oklch(1 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-mono; /* Mono font everywhere for brutalist feel */
+  }
+}
+
+/* Brutalist utilities */
+.brutalist-card {
+  @apply bg-card border-4 border-black shadow-[8px_8px_0_0_#000] p-6;
+}
+
+.dark .brutalist-card {
+  @apply border-white shadow-[8px_8px_0_0_#fff];
+}
+
+.brutalist-button {
+  @apply bg-primary text-primary-foreground font-black uppercase border-4 border-black shadow-[4px_4px_0_0_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_#000] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all;
+}
+
+.dark .brutalist-button {
+  @apply border-white shadow-[4px_4px_0_0_#fff] hover:shadow-[2px_2px_0_0_#fff];
+}
+
+.brutalist-input {
+  @apply bg-input border-4 border-black text-foreground font-mono focus:outline-none focus:ring-0 focus:shadow-[4px_4px_0_0_#000] transition-shadow;
+}
+
+.dark .brutalist-input {
+  @apply border-white focus:shadow-[4px_4px_0_0_#fff];
+}
