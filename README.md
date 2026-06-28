@@ -143,6 +143,16 @@ If you'd like to improve HumanizeAI, feel free to fork the repository, create a 
 
 If you found this project useful, consider giving it a **⭐ Star** on GitHub. It helps others discover the project and motivates future improvements.
 
+![Next.js](https://img.shields.io/badge/Next.js-15-000000?style=for-the-badge&logo=nextdotjs)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=for-the-badge&logo=tailwindcss)
+![Groq](https://img.shields.io/badge/Groq-AI-black?style=for-the-badge)
+![Gemini](https://img.shields.io/badge/Google-Gemini-4285F4?style=for-the-badge)
+![OpenRouter](https://img.shields.io/badge/OpenRouter-AI-orange?style=for-the-badge)
+![Upstash](https://img.shields.io/badge/Upstash-Redis-00E9A3?style=for-the-badge)
+![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?style=for-the-badge&logo=vercel)
+![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
 ---
 
 <p align="center">
